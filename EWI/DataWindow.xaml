@@ -11,15 +11,18 @@
 
         <Frame x:Name="FrameData2" Content="FrameData2" HorizontalAlignment="Left" Height="367" Margin="10,43,0,0" VerticalAlignment="Top" Width="374" NavigationUIVisibility="Hidden"/>
         <Label Content="Dodawanie sprzętu do bazy danych" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="242"/>
-        <Label Content="Nazwa ewidencyjna" HorizontalAlignment="Left" Height="29" Margin="10,72,0,0" VerticalAlignment="Top" Width="122"/>
-        <Label Content="Producent" HorizontalAlignment="Left" Margin="10,106,0,0" VerticalAlignment="Top" Width="122"/>
-        <Label Content="Model" HorizontalAlignment="Left" Margin="10,137,0,0" VerticalAlignment="Top" Width="122"/>
-        <Label Content="Data zakupu" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" Width="122"/>
-        <TextBox x:Name="txtNazwa" HorizontalAlignment="Left" Margin="137,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="29" Width="173" />
-        <TextBox x:Name="txtProducent" HorizontalAlignment="Left" Margin="137,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="173"/>
-        <TextBox x:Name="txtModel" HorizontalAlignment="Left" Margin="137,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="173"/>
-        <TextBox x:Name="txtData_zakupu" HorizontalAlignment="Left" Margin="137,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="173"/>
-        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="13,212,0,0" VerticalAlignment="Top" Width="119" Height="33" Click="Button_Click"/>
+        <Label Content="Nazwa ewidencyjna" HorizontalAlignment="Left" Height="29" Margin="10,101,0,0" VerticalAlignment="Top" Width="122"/>
+        <Label Content="Producent" HorizontalAlignment="Left" Margin="10,135,0,0" VerticalAlignment="Top" Width="122"/>
+        <Label Content="Model" HorizontalAlignment="Left" Margin="10,166,0,0" VerticalAlignment="Top" Width="122"/>
+        <Label Content="Data zakupu" HorizontalAlignment="Left" Margin="10,197,0,0" VerticalAlignment="Top" Width="122"/>
+        <TextBox x:Name="txtNazwa" HorizontalAlignment="Left" Margin="137,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="29" Width="173"  />
+        <TextBox x:Name="txtProducent" HorizontalAlignment="Left" Margin="137,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="173"/>
+        <TextBox x:Name="txtModel" HorizontalAlignment="Left" Margin="137,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="173"/>
+        <TextBox x:Name="txtData_zakupu" HorizontalAlignment="Left" Margin="137,197,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="173"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="13,264,0,0" VerticalAlignment="Top" Width="119" Height="33" Click="Button_Click"/>
+        <Label Content="Typ" HorizontalAlignment="Left" Margin="13,67,0,0" VerticalAlignment="Top" Width="122"/>
+        <ComboBox x:Name="txtTyp" HorizontalAlignment="Left" Margin="137,70,0,0" VerticalAlignment="Top" Width="173" Height="26" ItemsSource="{Binding types}"/>
+
 
     </Grid>
 </Window>

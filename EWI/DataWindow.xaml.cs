@@ -21,10 +21,12 @@ namespace EWI
     /// </summary>
     public partial class DataWindow : Window
     {
-
+        public string[] types { get; set; }
         public DataWindow()
         {
             InitializeComponent();
+            types = new string[] { "Komputer", "Laptop", "Monitor", "Telefon", "Stacja dokująca", "Kamery" };
+            DataContext = this;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -32,9 +34,10 @@ namespace EWI
             {
                 if (log.State == ConnectionState.Closed)
                     log.Open();
-                String query = "INSERT INTO Sprzet(ID, Nazwa_ewidencyjna, Producent, Model, Data_zakupu) " +
-  "VALUES ((SELECT ISNULL(MAX(ID) + 1, 1) FROM Sprzet), @Nazwa_ewidencyjna, @Producent, @Model, @Data_zakupu)"; //automatyczny nowy numer ID (SELECT ISNULL(MAX(ID) + 1, 1) FROM Sprzet)
+                String query = "INSERT INTO Sprzet(ID, Nazwa_ewidencyjna, Producent, Model, Data_zakupu, Typ) " +
+  "VALUES ((SELECT ISNULL(MAX(ID) + 1, 1) FROM Sprzet), @Nazwa_ewidencyjna, @Producent, @Model, @Data_zakupu, @Typ)"; //automatyczny nowy numer ID (SELECT ISNULL(MAX(ID) + 1, 1) FROM Sprzet)
                 SqlCommand sqlCmd = new SqlCommand(query, log);
+                sqlCmd.Parameters.AddWithValue("@Typ", txtTyp.Text);
                 sqlCmd.Parameters.AddWithValue("@Nazwa_ewidencyjna", txtNazwa.Text);
                 sqlCmd.Parameters.AddWithValue("@Producent", txtProducent.Text);
                 sqlCmd.Parameters.AddWithValue("@Model", txtModel.Text);
@@ -51,5 +54,7 @@ namespace EWI
 
             }
         }
+
+        
     }
 }

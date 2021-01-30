@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EWI"
         mc:Ignorable="d"
-         Title="EWI" Height="650" Width="1200">
+         Title="EWI" Height="750" Width="1200">
     <Window.Resources>
        
         
@@ -16,11 +16,11 @@
             <ColumnDefinition Width="350*"/>
             <ColumnDefinition Width="100*"/>
         </Grid.ColumnDefinitions>
-
+        
 
         <Button x:Name="Button1" Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Width="158" Height="38" Click="Button1_Click" Margin="5,0,0,0"/>
         <Button x:Name="Button2" Content="Dane" HorizontalAlignment="Left" Margin="163,0,0,0" VerticalAlignment="Top" Width="158" Height="38" Click="Button2_Click" Grid.ColumnSpan="2"/>
-        <Button x:Name="Button3" Content="Raporty" HorizontalAlignment="Left" Margin="26.6,0,0,0" VerticalAlignment="Top" Width="158" Height="38" Click="Button3_Click" Grid.Column="1"/>
+        <Button x:Name="Button3" Content="Modyfikacja danych" HorizontalAlignment="Left" Margin="26.6,0,0,0" VerticalAlignment="Top" Width="158" Height="38" Click="Button3_Click" Grid.Column="1"/>
         <Button x:Name="Button4" Content="Pomoc" HorizontalAlignment="Left" Margin="184.6,0,0,0" VerticalAlignment="Top" Width="158" Height="38" Click="Button4_Click" Grid.Column="1"/>
         <Frame x:Name="FrameStart" Content="FrameStart1" HorizontalAlignment="Left" Height="367" Margin="10,43,0,0" VerticalAlignment="Top" Width="774" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2" Source="{Binding}"/>
 

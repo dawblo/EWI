@@ -23,6 +23,9 @@ namespace EWI
         public MainWindow()
         {
             InitializeComponent();
+           
+
+
         }
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
@@ -37,14 +40,22 @@ namespace EWI
 
             {
 
-                FrameStart.Content = new Data();
+                FrameStart.Content = new Wpf.PieChart.DoughnutChartExample();
 
             }
         }
+
+
+
+
         private void Button3_Click(object sender, RoutedEventArgs e)
         {
             {
-                MessageBox.Show("Raporty");
+
+                Form1 form = new Form1();
+                form.ShowDialog();
+
+
             }
         }
         private void Button4_Click(object sender, RoutedEventArgs e)
