@@ -3,13 +3,53 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:MetroChart="clr-namespace:De.TorstenMandelkow.MetroChart;assembly=De.TorstenMandelkow.MetroChart"
       xmlns:local="clr-namespace:EWI"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Start">
     <Grid>
+        
+        <Rectangle Fill="GhostWhite" HorizontalAlignment="Left" Height="350" RadiusY="10" RadiusX="10" Stroke="LightGray" StrokeThickness="1" VerticalAlignment="Top" Width="700" Margin="31,20,0,0"/>
+        <TextBlock Text="WYKORZYSTANIE PLANU FINANSOWEGO" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="WS Simple Gallifreyan" Foreground="Gray" FontSize="16" Margin="-258,-172,965,601.6"/>
+    
+    <Frame x:Name="FrameStart" Content="" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="774" NavigationUIVisibility="Hidden"/>
+        <Label Content="Witaj" HorizontalAlignment="Left" Margin="55,30,0,0" VerticalAlignment="Top" Height="36" Width="49" FontSize="16"/>
+        <TextBlock x:Name="user" HorizontalAlignment="Left" Margin="104,35,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="25" RenderTransformOrigin="0.501,0.7" Width="115" FontSize="16" FontWeight="Bold"/>
 
-        <Frame x:Name="FrameStart" Content="FrameStart2" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="774" NavigationUIVisibility="Hidden"/>
 
+
+
+        <Grid Grid.Column="2">
+            <Rectangle Fill="GhostWhite" HorizontalAlignment="Left" Height="82" Margin="143,154,0,0" RadiusY="10" RadiusX="10" VerticalAlignment="Top" Width="194" StrokeThickness="1" Stroke="red" />
+
+            <Rectangle Fill="GhostWhite" HorizontalAlignment="Left" Height="82" Margin="143,241,0,0" RadiusY="10" RadiusX="10" VerticalAlignment="Top" Width="194" StrokeThickness="1" Stroke="green"/>
+        </Grid>
+        <Grid Width="35" Height="50" Background="#FFCF1F1F" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="164,155,0,0">
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="20" Color="#FFECECEC" RenderingBias="Quality" ShadowDepth="1"/>
+            </Grid.Effect>
+            <materialDesign:PackIcon Kind="InformationOutline" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="8,0,7,0" Foreground="White" Width="20" Height="20"/>
+        </Grid>
+
+        <Grid Width="35" Height="50" Background="green" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="164,241,0,0">
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="20" Color="#FFECECEC" RenderingBias="Quality" ShadowDepth="1"/>
+            </Grid.Effect>
+            <materialDesign:PackIcon Kind="Store" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="8,0,7,0" Foreground="White" Width="20" Height="20"/>
+        </Grid>
+
+        <MetroChart:RadialGaugeChart Background="{x:Null}" ChartTitle="" ChartSubTitle=""  Margin="180,-16,307,269.6" >
+            <MetroChart:RadialGaugeChart.Series>
+                <MetroChart:ChartSeries
+                                        DisplayMember="Titulo"
+                                        ItemsSource="{Binding Path=Consumo}"
+                                        SeriesTitle="Consumo"
+                                        ValueMember="Porcentagem" HorizontalAlignment="Center"/>
+            </MetroChart:RadialGaugeChart.Series>
+        </MetroChart:RadialGaugeChart>
+        
     </Grid>
+
 </Page>

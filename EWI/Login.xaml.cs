@@ -21,12 +21,24 @@ namespace EWI
     /// </summary>
     public partial class Login : Window
     {
+
+
         public Login()
         {
             InitializeComponent();
+
         }
+
+        public string user_name = "";
+
+
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+            
+
             SqlConnection log = new SqlConnection(@"Data Source=LAPTOPP; Initial Catalog=EWI;  Integrated Security=True;");
             {
                 if (log.State == ConnectionState.Closed)
@@ -35,6 +47,8 @@ namespace EWI
                 SqlCommand sqlCmd = new SqlCommand(query, log);
 
                 sqlCmd.Parameters.AddWithValue("@Username", txtUsername.Text);
+                
+
                 sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Password);
                 int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
                 if (count == 1)
@@ -47,10 +61,13 @@ namespace EWI
                 {
                     MessageBox.Show("Username or password is incorrect.");
                 }
+
             }
 
+            user_name = txtUsername.Text;
+            
         }
 
-
+        
     }
 }

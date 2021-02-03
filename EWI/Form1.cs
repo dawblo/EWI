@@ -1,37 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
-using System.Windows;
-using System.Threading.Tasks;
-using System.Windows.Controls;
-using System.Windows.Input;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data;
-using System.Data.SqlClient;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Input;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
+
 
 namespace EWI
 {
@@ -92,12 +63,13 @@ namespace EWI
                 sqlCmd.Parameters.AddWithValue("@ID_delete", dataGridView1.CurrentRow.Cells[0].Value.ToString());
                 int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
             }
+            
             }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DataWindow win1 = new DataWindow();
-            win1.ShowDialog();
+            DataWindow win = new DataWindow();
+            win.ShowDialog();
 
         }
 

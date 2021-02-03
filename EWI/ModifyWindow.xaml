@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EWI"
         mc:Ignorable="d"
-        Title="ModifyWindow" Height="530" Width="400">
+        Title="ModifyWindow" Height="530" Width="400" WindowStartupLocation="CenterScreen">
 
     <Grid Margin="-1,0,0.6,0">
 

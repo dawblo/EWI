@@ -20,10 +20,15 @@ namespace EWI
     /// </summary>
     public partial class MainWindow : Window
     {
+       
         public MainWindow()
         {
             InitializeComponent();
-           
+            Start p1 = new Start();
+            
+            FrameStart.Navigate(p1);
+
+
 
 
         }
@@ -31,18 +36,25 @@ namespace EWI
         {
             {
 
-                FrameStart.Content = new Start();
+                Start p1 = new Start();
+                FrameStart.Navigate(p1);
 
             }
         }
-        private void Button2_Click(object sender, RoutedEventArgs e)
+        public void Button2_Click(object sender, RoutedEventArgs e)
         {
 
             {
 
                 FrameStart.Content = new Wpf.PieChart.DoughnutChartExample();
+                
 
             }
+        }
+        private void Personalize_Type_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Properties["Type"] = 1;
+            FrameStart.Source = new Uri("Startframe.xaml", UriKind.Relative);
         }
 
 
@@ -51,7 +63,7 @@ namespace EWI
         private void Button3_Click(object sender, RoutedEventArgs e)
         {
             {
-
+               
                 Form1 form = new Form1();
                 form.ShowDialog();
 
@@ -64,5 +76,10 @@ namespace EWI
                 MessageBox.Show("Pomoc");
             }
         }
+
+       
+        
+
+
     }
 }
