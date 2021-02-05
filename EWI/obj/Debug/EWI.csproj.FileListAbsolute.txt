@@ -108,3 +108,4 @@ C:\Users\dawid\source\repos\EWI\EWI\bin\Debug\SharpDX.Mathematics.xml
 C:\Users\dawid\source\repos\EWI\EWI\obj\Debug\UserControl1.g.cs
 C:\Users\dawid\source\repos\EWI\EWI\obj\Debug\UserControl1.baml
 C:\Users\dawid\source\repos\EWI\EWI\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+C:\Users\dawid\source\repos\EWI\EWI\obj\Debug\EWI.Modify.resources

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Data;
+using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Controls;
 
 
 namespace EWI
@@ -11,27 +13,31 @@ namespace EWI
 
 
     {
+        
+
         public Form1()
         {
             InitializeComponent();
+
+            
             SqlConnection con = new SqlConnection(@"Data Source=LAPTOPP; Initial Catalog=EWI;  Integrated Security=True;");
             SqlCommand com = new SqlCommand("Select * from Sprzet", con);
             SqlDataAdapter d = new SqlDataAdapter(com);
             DataTable dt = new DataTable();
             d.Fill(dt);
             dataGridView1.DataSource = dt;
+
+            
+
+
+
+
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-            PodgladWindow win3 = new PodgladWindow();
-            win3.Show();
-            win3.txtNazwa.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            win3.txtProducent.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            win3.txtModel.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            win3.txtData_zakupu.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            this.Refresh();
+       
 
         }
 
@@ -95,19 +101,25 @@ namespace EWI
             this.Refresh();
         }
 
+
+
+
         public void button3_Click(object sender, EventArgs e)
         {
             
-            ModifyWindow win3 = new ModifyWindow();
-            win3.txtID.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            win3.txtNazwa.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            win3.txtProducent.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            win3.txtModel.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            win3.txtData_zakupu.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-           
-            win3.Show();
-            this.Refresh();
+
+
+            Modify fr = new Modify();
+            fr.Show();
             
+            
+                fr.box1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                fr.box2.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            
+            fr.Show();
+
+
         }
+
     }
 }

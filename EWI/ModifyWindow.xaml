@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EWI"
         mc:Ignorable="d"
-        Title="ModifyWindow" Height="530" Width="400" WindowStartupLocation="CenterScreen">
+        Title="ModifyWindow" Height="530" Width="550" WindowStartupLocation="CenterScreen">
 
-    <Grid Margin="-1,0,0.6,0">
+    <Grid Margin="-10,0,-115.4,0">
 
 
-        <Frame x:Name="FrameData2" Content="FrameData2" HorizontalAlignment="Left" Height="367" Margin="10,43,0,0" VerticalAlignment="Top" Width="374" NavigationUIVisibility="Hidden"/>
-        <Label Content="Modyfikacja danych" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="242"/>
+        <Frame x:Name="FrameData2" Content="" HorizontalAlignment="Left" Height="367" Margin="10,43,0,0" VerticalAlignment="Top" Width="374" NavigationUIVisibility="Hidden"/>
+        <Label Content="Modyfikacja danych" HorizontalAlignment="Left" Margin="137,0,0,0" VerticalAlignment="Top" Width="242"/>
         <Label Content="Nazwa ewidencyjna" HorizontalAlignment="Left" Height="29" Margin="10,72,0,0" VerticalAlignment="Top" Width="122"/>
         <Label Content="Producent" HorizontalAlignment="Left" Margin="10,106,0,0" VerticalAlignment="Top" Width="122"/>
         <Label Content="Model" HorizontalAlignment="Left" Margin="10,137,0,0" VerticalAlignment="Top" Width="122"/>
@@ -20,8 +20,29 @@
         <TextBox x:Name="txtProducent" HorizontalAlignment="Left" Margin="137,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="173"/>
         <TextBox x:Name="txtModel" HorizontalAlignment="Left" Margin="137,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="173"/>
         <TextBox x:Name="txtData_zakupu" HorizontalAlignment="Left" Margin="137,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="173"/>
-        <Button Content="Akceptuj" HorizontalAlignment="Left" Margin="13,212,0,0" VerticalAlignment="Top" Width="119" Height="33" Click="Button_Click"/>
-        <TextBox x:Name="txtID" HorizontalAlignment="Left" Height="23" Margin="137,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <Label Content="Przypisanie" HorizontalAlignment="Left" Margin="10,201,0,0" VerticalAlignment="Top" Width="122"/>
+        <Label Content="Imie" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top" Width="122"/>
+        <TextBox x:Name="txtImie" HorizontalAlignment="Left" Margin="137,232,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="173"/>
+        <Label Content="Nazwisko" HorizontalAlignment="Left" Margin="10,263,0,0" VerticalAlignment="Top" Width="122"/>
+        <TextBox x:Name="txtNazwisko" HorizontalAlignment="Left" Margin="137,262,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="173"/>
+        <Label Content="Stanowisko" HorizontalAlignment="Left" Margin="10,294,0,0" VerticalAlignment="Top" Width="122"/>
+        <TextBox x:Name="txtStanowisko" HorizontalAlignment="Left" Margin="137,294,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="173"/>
+        <Label Content="Dział" HorizontalAlignment="Left" Margin="10,325,0,0" VerticalAlignment="Top" Width="122"/>
+        <TextBox x:Name="txtDział" HorizontalAlignment="Left" Margin="137,325,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="173"/>
+        <ComboBox x:Name="txtPrzypisanie" HorizontalAlignment="Left" Margin="137,201,0,0" VerticalAlignment="Top" Width="173" Height="26" ItemsSource="{Binding przypisanie}"/>
+        <Button Content="Akceptuj" HorizontalAlignment="Left" Margin="13,457,0,0" VerticalAlignment="Top" Width="119" Height="33" Click="Button_Click"/>
+        <TextBox x:Name="txtID" Background="LightGray" HorizontalAlignment="Left" Height="29" Margin="137,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Visibility="Visible"/>
+        <TextBox x:Name="txtNazwa1" HorizontalAlignment="Left" Margin="336,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="173" />
+        <TextBox x:Name="txtProducent1" HorizontalAlignment="Left" Margin="336,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="173"/>
+        <TextBox x:Name="txtModel1" HorizontalAlignment="Left" Margin="336,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="173"/>
+        <TextBox x:Name="txtData_zakupu1" HorizontalAlignment="Left" Margin="336,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="173"/>
+        <TextBox x:Name="txtImie1" HorizontalAlignment="Left" Margin="336,232,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="173"/>
+        <TextBox x:Name="txtNazwisko1" HorizontalAlignment="Left" Margin="336,262,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="173"/>
+        <TextBox x:Name="txtStanowisko1" HorizontalAlignment="Left" Margin="336,294,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="173"/>
+        <TextBox x:Name="txtDział1" HorizontalAlignment="Left" Margin="336,325,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" Width="173"/>
+        <ComboBox x:Name="txtPrzypisanie1" HorizontalAlignment="Left" Margin="336,201,0,0" VerticalAlignment="Top" Width="173" Height="26" ItemsSource="{Binding przypisanie}"/>
+        <TextBox x:Name="txtID1" HorizontalAlignment="Left" Height="29" Margin="336,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Visibility="Visible" />
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="489,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

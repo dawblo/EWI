@@ -121,12 +121,8 @@ namespace Wpf.PieChart
             
 
         }
-       
-        
-        
-        
-       
 
+        
     }
 }
 

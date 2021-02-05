@@ -79,6 +79,7 @@ namespace EWI
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 3;
             this.button3.Text = "Modyfikacja";
+            this.button3.UseCompatibleTextRendering = true;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -125,9 +126,9 @@ namespace EWI
         #endregion
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button9;
         public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.Button button3;
     }
 }
