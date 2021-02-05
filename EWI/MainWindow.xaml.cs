@@ -46,16 +46,18 @@ namespace EWI
 
             {
 
-                FrameStart.Content = new Wpf.PieChart.DoughnutChartExample();
                 
+                Form1 form = new Form1();
+                form.ShowDialog();
+
 
             }
         }
-        private void Personalize_Type_Click(object sender, RoutedEventArgs e)
+       /* private void Personalize_Type_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Properties["Type"] = 1;
             FrameStart.Source = new Uri("Startframe.xaml", UriKind.Relative);
-        }
+        }*/
 
 
 
@@ -63,10 +65,9 @@ namespace EWI
         private void Button3_Click(object sender, RoutedEventArgs e)
         {
             {
-               
-                Form1 form = new Form1();
-                form.ShowDialog();
 
+                FrameStart.Content = new Wpf.PieChart.DoughnutChartExample();
+                
 
             }
         }

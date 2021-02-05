@@ -6,19 +6,17 @@
              xmlns:local="clr-namespace:Wpf.PieChart"
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="500" 
+             d:DesignHeight="100" d:DesignWidth="100" 
              d:DataContext="{d:DesignInstance local:PieChartExample}">
-    <Grid>
-        <lvc:PieChart LegendLocation="Bottom" DataClick="Chart_OnDataClick" Hoverable="False" DataTooltip="{x:Null}">
+    <Grid Margin="0,0,-18,-18">
+        <lvc:PieChart LegendLocation="Bottom" DataClick="Chart_OnDataClick" Hoverable="False" DataTooltip="{x:Null}" Margin="0,0,10,10">
             <lvc:PieChart.Series>
-                <lvc:PieSeries Title="Maria" Values="3" DataLabels="True"
+                <lvc:PieSeries 
+                    Title="Wolne" Values="50" DataLabels="True"
                                LabelPoint="{Binding PointLabel}"/>
-                <lvc:PieSeries Title="Charles" Values="4" DataLabels="True" 
+                <lvc:PieSeries Title="Przypisane" Values="50" DataLabels="True" 
                                LabelPoint="{Binding PointLabel}"/>
-                <lvc:PieSeries Title="Frida" Values="6" DataLabels="True" 
-                               LabelPoint="{Binding PointLabel}"/>
-                <lvc:PieSeries Title="Frederic" Values="2" DataLabels="True" 
-                               LabelPoint="{Binding PointLabel}"/>
+                
             </lvc:PieChart.Series>
         </lvc:PieChart>
     </Grid>

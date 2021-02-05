@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Wpf.PieChart"
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             
              xmlns:EWI="clr-namespace:EWI" x:Class="Wpf.PieChart.DoughnutChartExample"
              mc:Ignorable="d" d:DesignWidth="800" d:DataContext="{d:DesignInstance {x:Type local:DoughnutChartExample}}"
              Height="525" Width="1200" Title="Data">
@@ -12,14 +13,15 @@
 
 
 
-    <Grid x:Name="Wykres" Margin="-378,-190,823,342.8">
+    <Grid x:Name="Wykres" Margin="219,-169,389,329.8">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal"/>
+
         <lvc:PieChart Grid.Row="1" Series="{Binding SeriesCollection}" 
-                      LegendLocation="Right" InnerRadius="100" Margin="10">
+                      LegendLocation="Right" InnerRadius="100" Margin="-578,0,0,20" HorizontalAlignment="Left" Width="528">
             <lvc:PieChart.ChartLegend>
                 <lvc:DefaultLegend BulletSize="20"></lvc:DefaultLegend>
             </lvc:PieChart.ChartLegend>
@@ -27,12 +29,21 @@
                 <lvc:DefaultTooltip BulletSize="20"></lvc:DefaultTooltip>
             </lvc:PieChart.DataTooltip>
         </lvc:PieChart>
-        <Button Content="Odśwież" HorizontalAlignment="Left" Margin="680,0,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-        <Label Content="Liczba sprzętu" HorizontalAlignment="Left" Margin="273,-18,0,0" VerticalAlignment="Top" Width="145" Grid.RowSpan="2"/>
-        
+
+        <lvc:PieChart Grid.Row="1" Series="{Binding SeriesCollection2}" 
+                      LegendLocation="Right" InnerRadius="100" Margin="-45,0,0,20" HorizontalAlignment="Left" Width="592">
+            <lvc:PieChart.ChartLegend>
+                <lvc:DefaultLegend BulletSize="20"></lvc:DefaultLegend>
+            </lvc:PieChart.ChartLegend>
+            <lvc:PieChart.DataTooltip>
+                <lvc:DefaultTooltip BulletSize="20"></lvc:DefaultTooltip>
+            </lvc:PieChart.DataTooltip>
+        </lvc:PieChart>
+
+        <Button Content="Odśwież" HorizontalAlignment="Left" Margin="-82,-19,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Label Content="Liczba sprzętu" HorizontalAlignment="Left" Margin="-461,-26,0,0" VerticalAlignment="Top" Width="145" FontFamily="WS Simple Gallifreyan" Foreground="Gray" FontSize="12"/>
+        <Label Content="Wykorzystanie" HorizontalAlignment="Left" Margin="145,-22,0,0" VerticalAlignment="Top" Width="145" Grid.RowSpan="2" FontFamily="WS Simple Gallifreyan" Foreground="Gray" FontSize="12"/>
+
     </Grid>
-
-
-
 
 </Page>

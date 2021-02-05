@@ -33,6 +33,10 @@ namespace Wpf.PieChart
                 double stacja_dokujaca = (Int32)sqlCmd4.ExecuteScalar();
                 SqlCommand sqlCmd5 = new SqlCommand("select count(1) from Sprzet where Typ='Kamery'", log);
                 double kamery = (Int32)sqlCmd5.ExecuteScalar();
+                SqlCommand sqlCmd6 = new SqlCommand("select count(1) from Sprzet where Przypisanie=1", log);
+                double przypisanie = (Int32)sqlCmd6.ExecuteScalar();
+                SqlCommand sqlCmd7 = new SqlCommand("select count(1) from Sprzet where Przypisanie=0", log);
+                double przypisanie1 = (Int32)sqlCmd7.ExecuteScalar();
                 log.Close();
 
 
@@ -80,7 +84,26 @@ namespace Wpf.PieChart
 
             };
 
+                SeriesCollection2 = new SeriesCollection
+            {
+                new PieSeries
+                {
+                    Title = "Zajęty",
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(przypisanie) },
+                    DataLabels = true
+                },
+                new PieSeries
+                {
+                    Title = "Wolny",
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(przypisanie1) },
+                    DataLabels = true
+                },
                 
+
+
+            };
+
+
 
             }
             
@@ -89,6 +112,7 @@ namespace Wpf.PieChart
         }
 
         public SeriesCollection SeriesCollection { get; set; }
+        public SeriesCollection SeriesCollection2 { get; set; }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Refresh();
