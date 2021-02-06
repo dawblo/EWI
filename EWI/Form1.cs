@@ -115,7 +115,16 @@ namespace EWI
             
                 fr.box1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 fr.box2.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            
+                fr.box3.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            fr.box4.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            fr.box5.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            fr.box6.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            fr.box7.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            fr.box8.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            fr.box9.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+            fr.box10.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+            fr.box11.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
+
             fr.Show();
 
 

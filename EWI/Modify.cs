@@ -38,13 +38,20 @@ namespace EWI
             {
                 if (log.State == ConnectionState.Closed)
                     log.Open();
-                String query = "UPDATE Sprzet SET Nazwa_ewidencyjna=@Nazwa_ewidencyjna, Producent=@Producent, Model=@Model, Data_zakupu=@Data_zakupu WHERE ID=@ID";
+                String query = "UPDATE Sprzet SET Typ=@Typ, Nazwa_ewidencyjna=@Nazwa_ewidencyjna, Producent=@Producent, Model=@Model," +
+                    " Data_zakupu=@Data_zakupu, Przypisanie=@Przypisanie, Imie=@Imie, Nazwisko=@Nazwisko, Stanowisko=@Stanowisko, Dział=@Dział WHERE ID=@ID";
                 SqlCommand sqlCmd = new SqlCommand(query, log);
                 sqlCmd.Parameters.AddWithValue("@ID", box1.Text);
-                sqlCmd.Parameters.AddWithValue("@Nazwa_ewidencyjna", box2.Text);
-                sqlCmd.Parameters.AddWithValue("@Producent", box3.Text);
-                sqlCmd.Parameters.AddWithValue("@Model", box4.Text);
-                sqlCmd.Parameters.AddWithValue("@Data_zakupu", box5.Text);
+                sqlCmd.Parameters.AddWithValue("@Typ", box2.Text);
+                sqlCmd.Parameters.AddWithValue("@Nazwa_ewidencyjna", box3.Text);
+                sqlCmd.Parameters.AddWithValue("@Producent", box4.Text);
+                sqlCmd.Parameters.AddWithValue("@Model", box5.Text);
+                sqlCmd.Parameters.AddWithValue("@Data_zakupu", box6.Text);
+                sqlCmd.Parameters.AddWithValue("@Przypisanie", box7.Text);
+                sqlCmd.Parameters.AddWithValue("@Imie", box8.Text);
+                sqlCmd.Parameters.AddWithValue("@Nazwisko", box9.Text);
+                sqlCmd.Parameters.AddWithValue("@Stanowisko", box10.Text);
+                sqlCmd.Parameters.AddWithValue("@Dział", box11.Text);
                 int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
                 if (count == 0)
                 {
@@ -58,9 +65,6 @@ namespace EWI
             }
         }
 
-        private void box1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
+        
     }
 }
